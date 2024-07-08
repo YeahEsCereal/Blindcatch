@@ -39,11 +39,13 @@ function openeyes() {
                 button.style.display = 'none'
                 document.querySelector('#com').style.display = 'block'
                 setTimeout(function(){
-                    open_plr = false
-                    button.style.display = 'block'
-                    document.querySelector('#com').style.display = 'none'
-                    document.querySelector('body').style.backgroundColor = 'black'
-                    button.innerHTML = names[Math.floor(Math.random() * names.length)]
+                    if (result == 0) {
+                      open_plr = false
+                      button.style.display = 'block'
+                      document.querySelector('#com').style.display = 'none'
+                      document.querySelector('body').style.backgroundColor = 'black'
+                      button.innerHTML = names[Math.floor(Math.random() * names.length)]
+                    }
                 }, 3000);
             }
         }
