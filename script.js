@@ -12,13 +12,15 @@ function comloop() {
                     document.querySelector('#com').style.backgroundColor = 'rgb(147, 168, 220)'
                     win()
                 } else {
-                    open_com = true
-                    document.querySelector('#com').style.backgroundColor = 'rgb(147, 168, 220)'
-                    setTimeout(function(){
-                        open_com = false
-                        document.querySelector('#com').style.backgroundColor = 'black'
-                        comloop()
-                    }, 3000);
+                    if (result == 0) {
+                        open_com = true
+                        document.querySelector('#com').style.backgroundColor = 'rgb(147, 168, 220)'
+                        setTimeout(function(){
+                          open_com = false
+                          document.querySelector('#com').style.backgroundColor = 'black'
+                          comloop()
+                        }, 3000);
+                    }
                 }
             }
         }, Math.floor(Math.random() * 15000));
