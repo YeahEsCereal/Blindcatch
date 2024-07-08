@@ -1,0 +1,36 @@
+body {
+    min-height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+button { 
+    height: 50vh;
+    width: 50vw;
+    font-size: 3vh;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(33, 152, 199);
+    font-family: 'Cascadia Code', 'Arial', sans-serif;
+    box-shadow: 0 0 10px 10px rgb(12, 46, 78);
+}
+
+#open {
+    border: solid;
+    border-color: rgb(20, 110, 143);
+}
+
+#open:hover {
+    box-shadow: 0 0 10px 15px rgb(12, 46, 78);
+}
+
+#com {
+    display: none;
+    background-color: black;
+    border: none;
+    box-shadow: 0 0 0 0 black;
+    height: 40vh;
+    width: 40vw;
+}
