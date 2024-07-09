@@ -3,6 +3,7 @@ button = document.querySelector('#open')
 result = 0
 open_plr = false
 open_com = false
+db = false
 
 function comloop() {
     if (result == 0) {
@@ -30,7 +31,7 @@ function comloop() {
 }
 
 function openeyes() {
-    if (result == 0) {
+    if (result == 0 && db == false) {
         if (open_plr == false) {
             if (open_com == true) {
                 document.querySelector('body').style.backgroundColor = 'white'
@@ -49,8 +50,12 @@ function openeyes() {
                       document.querySelector('#com').style.display = 'none'
                       document.querySelector('body').style.backgroundColor = 'black'
                       button.innerHTML = names[Math.floor(Math.random() * names.length)]
+                      db = true
+                      setTimeout(function(){
+                        db = false
+                      }, 3000)
                     }
-                }, 3000);
+                }, 3000)
             }
         }
     }
