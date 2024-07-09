@@ -1,3 +1,7 @@
+* {
+    font-color: white;
+}
+
 body {
     min-height: 97vh;
     display: flex;
